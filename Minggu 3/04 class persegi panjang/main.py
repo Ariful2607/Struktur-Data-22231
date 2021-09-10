@@ -1,0 +1,26 @@
+from persegi_panjang import persegi_panjang
+
+# p1=persegi_panjang()
+# print("titik sudut p1 : ", p1.titiksudut)
+# print("panjang p1 : ", p1.panjang)
+# print("lebar p1 : ", p1.lebar)
+# print("luas p1 : ", p1.hitungluas())
+# print("keliling p1 : ", p1.hitungkeliling())
+# print()
+
+p2=persegi_panjang(4,5)
+print("titik sudut p2 : ", p2.titiksudut)
+print("panjang p2 : ", p2.panjang)
+print("lebar p2 : ", p2.lebar)
+print("luas p2 : ", p2.hitungluas())
+print("keliling p2 : ", p2.hitungkeliling())
+print()
+
+print("mengubah ukuran p2 menjadi 3 kali lipat")
+p2.ubahukuran(3)
+print("titik sudut p2 : ", p2.titiksudut)
+print("panjang p2 : ", p2.panjang)
+print("lebar p2 : ", p2.lebar)
+print("luas p2 : ", p2.hitungluas())
+print("keliling p2 : ", p2.hitungkeliling())
+print()
