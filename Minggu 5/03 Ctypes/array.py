@@ -40,20 +40,25 @@ class Array :
         return self.Max-self.Min
 
 #Buatlah array berkuran 10
-# arr = Array(10)
+arr = Array(10)
+
 
 #Setlah semua data di array yang anda buat dengan nilai 10
-# for i in range(arr.ukuran):
-#     arr.setitem(i,10)
+for i in range(arr.ukuran):
+    arr.setitem(i,10)
+
 
 #Cetaklah seluruh array
 # for i in range(arr.ukuran):
 #     print ("index",i," adalah :", arr.getitem(i))
 
 #Isilah elemen ke 2 dengan 8, elemen 4 dengan 100, elemen 0 dengan 50
-# arr.setitem(1,8)
-# arr.setitem(3,100)
-# arr.setitem(0,50)
+arr.setitem(1,8)
+arr.setitem(3,100)
+arr.setitem(0,50)
+
+# 50  8   10  100 10  10  10  10  10  10
+# 0   1   2   3   4   5   6   7   8   9
 
 #Cetak array index ke 1,2,3
 # print (arr.getitem(1))
@@ -65,7 +70,8 @@ class Array :
 #     print ("index",i," adalah :", arr.getitem(i))
 
 #Tambahkan function getMax() untuk mencari nilai terbesar di array tersebut.
-# print (arr.getmax())
+print (arr.getmax())
+print (arr.getmin())
 
 #Buat function mencari range (selisih bilangan terbesar dengan terkecil).
-# print (arr.getselisih())
+print (arr.getselisih())
