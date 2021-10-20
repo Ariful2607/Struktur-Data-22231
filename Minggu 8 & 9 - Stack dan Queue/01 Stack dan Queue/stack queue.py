@@ -28,7 +28,7 @@ class LinkedList:
             self.start_node = new_node
             return
         n = self.start_node
-        while n.ref is not None: #n.ref --> next node --> null
+        while n.ref is not None:
             n= n.ref
         n.ref = new_node;
     
@@ -91,7 +91,9 @@ class LinkedList:
         if self.start_node is None:
             print("The list has no element to delete")
             return
+        data = self.start_node.item
         self.start_node = self.start_node.ref
+        return data
 
     def delete_at_end(self):
         if self.start_node is None:
@@ -130,74 +132,41 @@ class LinkedList:
         if self.start_node is None:
             print("The list has no element to delete")
             return
-
+    
         # Deleting first node
         if self.start_node.item == x:
             self.start_node = self.start_node.ref
             return
-
+    
         n = self.start_node
         while n.ref is not None:
             if n.ref.item == x:
                 break
             n = n.ref
-
+    
         if n.ref is None:
             print("item not found in the list")
         else:
             n.ref = n.ref.ref
 
-    def print_list(self):
-        printval = self.start_node
-        while (printval):
-            print(printval.item),
-            printval = printval.ref
+class Stack:
+    def __init__(self):
+        self.stack = LinkedList()
 
-                            ### LATIHAN SOAL ###
-# Buatlah sebuah list 
-llist = LinkedList()
-#head_note
+    def push(self, item):
+        self.stack.insert_at_start(item)
 
-# Masukkan data 9 menggunakan operasi tambah di awal. Gambarkan isi list saat ini
-llist.insert_at_start(9)
+    def pop(self):
+        removed = self.stack.delete_at_start()
+        return removed
 
-#head_note --> 9|null
+class Queue:
+    def __init__(self):
+        self.queue = LinkedList()
 
-# Masukkan data 2 menggunakan operasi tambah di awal. Gambarkan isi list saat ini
-llist.insert_at_start(2)
+    def enqueue(self, item):
+        self.queue.insert_at_end(item)
 
-#head_note --> 2|next --> 9|null
-
-# Masukkan data 6 menggunakan operasi tambah di akhir. Gambarkan isi list saat ini
-llist.insert_at_end(6)
-
-#head_note --> 2|next --> 9|next --> 6|null
-
-# Masukkan data 11 menggunakan operasi tambah di akhir. Gambarkan isi list saat ini
-llist.insert_at_end(11)
-
-#head_note --> 2|next --> 9|next --> 6|next --> 11|null
-
-# Masukkan data 2 di indeks 1. Gambarkan isi list saat ini
-llist.insert_at_index (0,2)
-
-#head_note --> 2|next --> 2|next --> 9|next --> 6|next --> 11|null
-
-# Masukkan data 12 di indeks 4. Gambarkan isi list saat ini
-llist.insert_at_index(4,12)
-
-#head_note --> 2|next --> 2|next --> 9|next --> 6|next --> 12|next --> 11|null
-
-# Cetaklah isi list saat ini
-# print(llist)
-llist.print_list()
-
-# Hapus Data di Indeks Pertama
-
-# Hapus Data di Indeks Terakhir
-
-# Cetaklah isi list saat ini
-
-# Cari nilai 12 dalam list
-
-# Cari nilai 15 dalam list
+    def dequeue(self):
+        removed = self.queue.delete_at_start()
+        return removed
