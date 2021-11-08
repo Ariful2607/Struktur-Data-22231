@@ -5,19 +5,19 @@ INF = 100000
 # function to get right child of a node of a tree
 def get_right_child(A, index):
   if((((2*index)+1) < len(A)) and (index >= 1)):
-    return (2*index)+1
+    return (2*index)+1 #Jika get right child --> 2i+1
   return -1
  
 # function to get left child of a node of a tree
 def get_left_child(A, index):
     if(((2*index) < len(A)) and (index >= 1)):
-        return 2*index
+        return 2*index #Jika get left child --> 2i
     return -1
 
 # function to get the parent of a node of a tree
 def get_parent(A, index):
   if ((index > 1) and (index < len(A))):
-    return index//2
+    return index//2 #Jika get left child --> i/2 dibulatkan ke bawah
   return -1
 
 def max_heapify(A, index):

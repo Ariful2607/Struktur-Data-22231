@@ -17,7 +17,7 @@ class MaxHeap:
     def rightChild(self, index):
         return (2 * index) + 1
   
-    def isLeaf(self, index):
+    def isLeaf(self, index): #mengecek apakah memiliki child atau tidak bernilai true jika tidak memiliki child
         if index >= (self.size//2) and index <= self.size:
             return True
         return False
@@ -55,7 +55,7 @@ class MaxHeap:
                   " RIGHT CHILD : " + str(self.Heap[2 * i + 1]))
         
       
-    def extractMax(self):
+    def extractMax(self): #node root
         nilai_max = self.Heap[self.FRONT]
         self.Heap[self.FRONT] = self.Heap[self.size]
         self.size -= 1
@@ -63,7 +63,7 @@ class MaxHeap:
               
         return print(nilai_max)
 
-class MinHeap:
+class MinHeap: #nilai paling atas nilai min
  
     def __init__(self, maxsize):
         self.maxsize = maxsize
@@ -133,43 +133,35 @@ class MinHeap:
 
 ########################### DRIVER PROGRAM ###################################
 
-# #Buat MaxHeap
+#Buat MaxHeap
 # maksimal = MaxHeap(5)
 
-# # #insert MaxHeap
+#insert MaxHeap
 # maksimal.insert(4)
 # maksimal.insert(2)
 # maksimal.insert(5)
 # maksimal.insert(3)
 # maksimal.insert(1)
 
-# #Print MaxHeap
+#         5
+#     3        4
+#  2     1
+
+#Print MaxHeap
 # maksimal.Print()
 
 #Buat MinHeap
-# Minimal = MinHeap(5)
+Minimal = MinHeap(5)
 
-# #insert Minheap
-# Minimal.insert(4)
-# Minimal.insert(2)
-# Minimal.insert(5)
-# Minimal.insert(3)
-# Minimal.insert(1)
+#insert Minheap
+Minimal.insert(4)
+Minimal.insert(2)
+Minimal.insert(5)
+Minimal.insert(3)
+Minimal.insert(1)
 
-# #Print MaxHeap
-# Minimal.Print()
-
-########################### LATIHAN ###################################
-minimal = MinHeap(7)
-
-minimal.insert(10)
-minimal.insert(8)
-minimal.insert(15)
-minimal.insert(7)
-minimal.insert(1)
-
-minimal.remove()
-
-minimal.Print()
-# minimal.extractMax()
-# print(minimal.isLeaf(2))
+#Print MaxHeap
+Minimal.Print()
+#         1
+#      2     5
+#   4     3 
