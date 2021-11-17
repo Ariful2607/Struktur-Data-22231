@@ -111,6 +111,7 @@ class AVL_Tree(object):
         print("{0} ".format(root.val), end="")
         self.preOrder(root.left)
         self.preOrder(root.right)
+        
  
  
 # Driver program to test above function
@@ -138,8 +139,6 @@ myTree.preOrder(root)
 print()
 
 # Inorder Traversal
-print("Inorder traversal of the",
-      "constructed AVL tree is")
-myTree.inOrder(root)
-print()
+
+# PostOrder Traversal
 
