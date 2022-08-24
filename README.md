@@ -1,2 +1,2 @@
-# StrukturData21221
- Merupakan repositori MK Struktur Data TA 2021/2022 Gasal Fakultas Ilmu Komputer Universitas Jember
+# StrukturData22231
+Repositori Mata Kuliah Struktur Data TA 2022/2023 Gasal Fakultas Ilmu Komputer Universitas Jember
